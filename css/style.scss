@@ -1,0 +1,133 @@
+@import "reset";
+@import "_variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: $white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  padding-left: 75px;
+  padding-right: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    margin-top: 50px;
+    color: $red;
+    font-size: 80px;
+    width: 100%;
+    letter-spacing: 5px;
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 80px;
+  }
+  h3,p {
+    color: $red;
+    width: 120%;
+  }
+  p {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  nav {
+    margin-bottom: 20px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 20px;
+      color: black;
+      opacity: 0.5;
+      border-bottom: 2px solid rgba(0,0,0,0.8);
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  span {
+    font-size: 15px;
+    font-weight: 100;
+  }
+}
+
+main {
+  background-color: $red;
+  margin-left: $fixedWidth;
+  position: relative;
+  nav {
+    background-color: $red;
+    opacity: 0.8;
+    width: 67%;
+    height: 10%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:  center;
+    span {
+      color: white;
+      font-size: 20px;
+    }
+  }
+  .movie {
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.1) 2%,
+      rgba(0,0,0,0),
+      rgba(0,0,0,0),
+      rgba(0,0,0,0),
+      rgba(0,0,0,0),
+    )
+    $red;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    .movie__header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      align-items: flex-end;
+      h4 {
+        font-size: 32px;
+      }
+      h5 {
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  img {
+    width: 500px;
+    height: 500px;
+    border-radius: 20%;
+    box-shadow: 15px 15px 15px rgba(0,0,0,0.3);
+}
+.text {
+  margin-top: 50px;
+  width: 80%;
+  opacity: 0.9;
+}
+}
